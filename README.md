@@ -1,2 +1,14 @@
-# mfe-skeleton
-pull this repo to start a new MFE app configured with new dependencies versions
+**on the package.js file:**
+
+1. Name your app on the package.json name field. the name you will type here would be injected to the index.html-title and to the ModuleFederation plugin inside the webpack.config.js
+
+2. the field "build:start"- Update the port number if you need to.
+
+3. update/add author name and details. 
+
+4. Update your dependencies.
+
+
+**on the webpack.config.js file:**
+
+1. Update the 'port' variable.
