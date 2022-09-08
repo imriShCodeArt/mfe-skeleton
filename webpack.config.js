@@ -4,6 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 const path = require("path");
 const name = require("./package.json").name;
+const favicon = require("./src/assets/favicon.ico");
 
 const port = 3000;
 
@@ -14,7 +15,9 @@ module.exports = {
 
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
-    alias: {},
+    alias: {
+      assets: path.resolve(__dirname, './src/assets')
+    },
   },
 
   devServer: {
@@ -77,6 +80,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       title: name,
+      favicon: './src/assets/favicon.ico',
     }),
   ],
 
