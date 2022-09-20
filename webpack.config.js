@@ -4,7 +4,6 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 const path = require("path");
 const name = require("./package.json").name;
-const favicon = require("./src/assets/favicon.ico");
 
 const port = 3000;
 
