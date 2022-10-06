@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "theme",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
