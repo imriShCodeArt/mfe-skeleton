@@ -5,7 +5,7 @@ const deps = require("./package.json").dependencies;
 const path = require("path");
 const name = require("./package.json").name;
 
-const port = 4000;
+const port = 3000;
 
 module.exports = {
   output: {
@@ -15,8 +15,7 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
     alias: {
-      assets: path.resolve(__dirname, "./src/assets"),
-      shared: path.resolve(__dirname, "./shared"),
+      assets: path.resolve(__dirname, './src/assets')
     },
   },
 
@@ -59,9 +58,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: name,
       filename: "remoteEntry.js",
-      remotes: {
-        components: "components@http://localhost:4001/remoteEntry.js",
-      },
+      remotes: {},
       exposes: {},
       shared: {
         ...deps,
@@ -82,7 +79,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       title: name,
-      favicon: "./src/assets/favicon.ico",
+      favicon: './src/assets/favicon.ico',
     }),
   ],
 
